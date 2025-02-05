@@ -52,9 +52,9 @@ body:
     attributes:
       label: "Contribution Guidelines"
       options:
-        - label: "I have searched [existing issues](https://github.com/Jivan052/testing/issues) and this is not a duplicate"
+        - label: "I have searched [existing issues](https://github.com/Divyanshu6928/testing/issues) and this is not a duplicate"
           required: true
-        - label: "I have read the [Contributing Guidelines](https://github.com/Jivan052/testing/blob/main/CONTRIBUTING.md)"
+        - label: "I have read the [Contributing Guidelines](https://github.com/Divyanshu6928/testing/blob/main/CONTRIBUTING.md)"
           required: true
         - label: "I would like to implement this feature"
           required: false
