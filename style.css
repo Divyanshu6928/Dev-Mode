@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #1e1e2e, #12121a);
+    color: #fff;
+}
+.container {
+    text-align: center;
+    background: linear-gradient(135deg, #282a36, #1b1b2f);
+    padding: 30px;
+    border-radius: 12.5px;
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
+    position: relative;
+    width: 350px;
+}
+.timer-display {
+    font-size: 4em;
+    margin: 20px 0;
+    color: #c792ea;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(147, 112, 219, 0.7);
+}
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #444;
+    border-radius: 12.5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(135deg, #7b68ee, #6a5acd);
+    transition: width 0.5s;
+}
+.controls button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 12.5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.settings label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+.settings input {
+    width: 60px;
+    text-align: center;
+    border-radius: 12.5px;
+    padding: 5px;
+    border: none;
+    font-size: 1.1em;
+    background: #2e2e3e;
+    color: white;
+}
+
+#start {
+    background: linear-gradient(135deg, #7b68ee, #6a5acd);
+    color: white;   
+    box-shadow: 0 4px 15px rgba(123, 104, 238, 0.5);
+}
+#pause {
+    background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
+}
+#reset {
+    background: linear-gradient(135deg, #4caf50, #2e8b57);
+    color: white;
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
+}
