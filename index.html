@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,20 +9,29 @@
 <body>
     <div class="container">
         <h1>Pomodoro Timer</h1>
-        <div class="progress-bar"><div class="progress"></div></div>
-        <div class="timer-display">25:00</div>
+        
+        <div class="timer-container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="timer-display">25:00</div>
+        </div>
+
         <div class="controls">
             <button id="start">Start</button>
             <button id="pause">Pause</button>
             <button id="reset">Reset</button>
         </div>
+
         <div class="settings">
             <label>Work (min): <input type="number" id="work-time" value="25"></label>
             <label>Break (min): <input type="number" id="break-time" value="5"></label>
             <label>Long Break (min): <input type="number" id="long-break-time" value="15"></label>
         </div>
+
         <p>Sessions Completed: <span id="session-count">0</span></p>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
