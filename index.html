@@ -23,11 +23,18 @@
             <button id="reset">Reset</button>
         </div>
 
+
         <div class="settings">
             <label>Work (min): <input type="number" id="work-time" value="25"></label>
             <label>Break (min): <input type="number" id="break-time" value="5"></label>
             <label>Long Break (min): <input type="number" id="long-break-time" value="15"></label>
         </div>
+
+        <ol class="settings">
+           <li> <label class="work1">Work (min): <input type="number" id="work-time" value="25" min="1"> <button class="btn">Set</button> </label> </li>
+           <li><label class="work2">Break (min): <input type="number" id="break-time" value="5" min="0"></label></li>
+            <li><label class="work3">Long Break (min): <input type="number" id="long-break-time" value="15" min="0" class="longbreak"></label></li>
+        </ol
 
         <p>Sessions Completed: <span id="session-count">0</span></p>
     </div>
