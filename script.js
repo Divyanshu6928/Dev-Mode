@@ -12,7 +12,8 @@ const longBreakInput = document.getElementById("long-break-time");
 const startBtn = document.getElementById("start");
 const pauseBtn = document.getElementById("pause");
 const resetBtn = document.getElementById("reset");
-const alarm = new Audio('');
+const alarm = new Audio('audio/Untitled ‑ Made with FlexClip.mp3');
+const sessionCompletion= new Audio("audio/discord-calling-250633.mp3")
 
 function updateDisplay() {
     let minutes = Math.floor(timeLeft / 60);
@@ -28,16 +29,20 @@ function startTimer() {
         if (timeLeft > 0) {
             timeLeft--;
             updateDisplay();
-        } else {
-            alarm.play();
+        } 
+        else {
+            
             clearInterval(timer);
             isRunning = false;
             if (!isBreak) {
+                
+                sessionCompletion.play();// sound on completion of a session
                 sessions++;
                 sessionCount.textContent = sessions;
                 timeLeft = (sessions % 4 === 0) ? longBreakInput.value * 60 : breakInput.value * 60;
                 isBreak = true;
             } else {
+                alarm.play(); //sound on completion of break
                 timeLeft = workInput.value * 60;
                 isBreak = false;
             }
