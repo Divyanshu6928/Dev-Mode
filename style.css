@@ -7,21 +7,24 @@ body {
     background: radial-gradient(circle, #1e1e2e, #12121a);
     color: #fff;
 }
-.container {
+h1{
+    color: white;
+}
+.container1 {
     text-align: center;
     background: linear-gradient(135deg, #282a36, #1b1b2f);
     padding: 30px;
     border-radius: 12.5px;
     box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
     position: relative;
-    width: 350px;
+    width: 400px;
 }
-.timer-display {
+.timer-display{
     font-size: 4em;
     margin: 20px 0;
-    color: #c792ea;
+    color: rgb(86, 23, 128);
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(147, 112, 219, 0.7);
+    text-shadow: 0 0 10px rgba(147, 112, 219, 0.3);
 }
 .progress-bar {
     width: 100%;
@@ -79,3 +82,73 @@ body {
     color: white;
     box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
 }
+#skip-break {
+    background: linear-gradient(135deg, #29c8bd, #71c5c5);
+    color: white;
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
+}
+
+.body-chg{
+    background: radial-gradient(circle, #bbbbbd, #d0d0d4);
+    color: #212020;
+}
+.h1-chg{
+    color: white;
+    text-shadow: 0 0 10px rgba(11, 10, 14, 0.3);
+    font-family: serif;
+    font-size: 40px;
+}
+.container1-chg{
+    background: linear-gradient(135deg, #b6bad2, #a8a8b8);
+    box-shadow: 0 0 20px rgba(63, 60, 67, 0.8);
+} 
+.timer-display-chg{
+    font-size: 50px;
+     text-shadow: 0 0 10px rgba(11, 10, 14, 0.1);
+    color: rgb(64, 9, 101);
+}
+.progress-bar-chg{
+    background: #d5d3d3;
+  
+}
+
+label,p{
+    color: white;
+}
+#h1{
+    color: white;
+}
+#reset:hover, #pause:hover, #start:hover,#skip-break:hover {
+    transform: scale(1.05);
+    background: none;
+     color: black;
+     
+}
+
+#reset:hover{
+    border: 2px solid green;
+    color: green;
+}
+#skip-break:hover{
+    border: 2px solid rgb(16, 232, 217);
+    color: rgb(18, 222, 212);
+}
+
+#pause:hover{
+    border: 2px solid red;
+    color: red;
+}
+
+#start:hover{
+    border: 2px solid blue;
+    color: blue;
+}
+.checkbtn{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 20px;
+}
+ .h1-chg{
+    color: black;
+ }

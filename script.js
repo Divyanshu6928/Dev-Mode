@@ -12,7 +12,7 @@ const longBreakInput = document.getElementById("long-break-time");
 const startBtn = document.getElementById("start");
 const pauseBtn = document.getElementById("pause");
 const resetBtn = document.getElementById("reset");
-const alarm = new Audio('');
+const alarm = new Audio('/Dev-Mode/timer.mp3');
 
 function updateDisplay() {
     let minutes = Math.floor(timeLeft / 60);
@@ -29,6 +29,8 @@ function startTimer() {
             timeLeft--;
             updateDisplay();
         } else {
+            //alert 
+            // alert("Time is up!");
             alarm.play();
             clearInterval(timer);
             isRunning = false;
@@ -60,6 +62,20 @@ function resetTimer() {
     timeLeft = workInput.value * 60;
     isBreak = false;
     updateDisplay();
+}
+
+const skipBreakBtn = document.getElementById("skip-break");
+skipBreakBtn.addEventListener("click", skipBreak);
+
+function skipBreak() {
+    if (isBreak) {
+        clearInterval(timer); 
+        timeLeft = workInput.value * 60;
+        isBreak = false; 
+        updateDisplay(); 
+        startTimer(); 
+    }
+    
 }
 
 startBtn.addEventListener("click", startTimer);
