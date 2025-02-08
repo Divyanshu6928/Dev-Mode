@@ -37,9 +37,15 @@ body {
     background: linear-gradient(135deg, #7b68ee, #6a5acd);
     transition: width 0.5s;
 }
+.controls{
+    display: flex;
+    padding: 1px;
+    
+}
 .controls button {
-    margin: 10px;
-    padding: 15px 30px;
+    
+    margin: 7px;
+    padding: 15px 20px;
     font-size: 1.2em;
     border: none;
     border-radius: 12.5px;
@@ -65,19 +71,35 @@ body {
 }
 
 #start {
-    background: linear-gradient(135deg, #7b68ee, #6a5acd);
+    background: linear-gradient(135deg, #4caf50, #2e8b57);
+
     color: white;   
-    box-shadow: 0 4px 15px rgba(123, 104, 238, 0.5);
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
+
+    transition: all 0.2s ease-in-out 
+}
+
+#start:hover{
+    transform: scale(1.1) ;
 }
 #pause {
     background: linear-gradient(135deg, #ff6b6b, #e74c3c);
     color: white;
+
     box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
+    transition: all 0.2s ease-in-out 
+}
+#pause:hover{
+    transform: scale(1.1) ;
 }
 #reset {
-    background: linear-gradient(135deg, #4caf50, #2e8b57);
+    background: linear-gradient(135deg, #7b68ee, #6a5acd);
     color: white;
-    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
+    box-shadow: 0 4px 15px rgba(123, 104, 238, 0.5);
+    transition: all 0.2s ease-in-out 
+}
+#reset:hover{
+    transform: scale(1.1) ;
 }
 
 input[type="number"]{
