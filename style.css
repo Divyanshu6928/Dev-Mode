@@ -48,9 +48,39 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+
+.btn{
+    background-color:rgb(239, 103, 103);
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    margin-left: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    width: 60px;
+}
+
+.work3{
+    margin-left: -30px;
+}
+.work2{
+    margin-left: -80px;
+}
+
+li{
+    list-style-type: none;
+}
+.settings{
+    margin-left: -90px;
+}
+
 .settings label {
     display: block;
-    margin: 10px 0;
+
+    /* margin: 10px 0; */
     font-size: 1.1em;
 }
 .settings input {
@@ -62,6 +92,11 @@ body {
     font-size: 1.1em;
     background: #2e2e3e;
     color: white;
+    margin-left: 30px;
+    margin: 5px;
+}
+.longbreak{
+    margin-left: -90px;
 }
 
 #start {
