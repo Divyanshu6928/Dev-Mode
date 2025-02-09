@@ -1,4 +1,8 @@
-
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -16,6 +20,7 @@ body {
     box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
     position: relative;
     width: 350px;
+    margin-top: -50px;
 }
 .timer-display {
     font-size: 4em;
@@ -90,11 +95,6 @@ li{
     text-align: center;
     border-radius: 12.5px;
     padding: 5px;
-
-
-
-
-
     
     border: none;
     font-size: 1.1em;
@@ -106,7 +106,31 @@ li{
 .longbreak{
     margin-left: -90px;
 }
-
+/* Button Styles */
+#start {
+    background: linear-gradient(135deg, #7b68ee, #6a5acd);
+    color: white;
+    box-shadow: 0 3px 8px rgba(123, 104, 238, 0.5);
+}
+#pause {
+    background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+    color: white;
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.5);
+}
+#reset {
+    background: linear-gradient(135deg, #4caf50, #2e8b57);
+    color: white;
+    box-shadow: 0 3px 8px rgba(46, 139, 87, 0.5);
+}
+#start:active{
+transform: scale(0.9);
+}
+#pause:active{
+    transform: scale(0.9);
+ }
+#reset:active{
+    transform: scale(0.9);
+}
 
 @media screen and (orientation:portrait){
     body {
@@ -175,21 +199,6 @@ li{
         color: white;
     }
     
-    #start {
-        background: linear-gradient(135deg, #7b68ee, #6a5acd);
-        color: white;   
-        box-shadow: 0 4px 15px rgba(123, 104, 238, 0.5);
-    }
-    #pause {
-        background: linear-gradient(135deg, #ff6b6b, #e74c3c);
-        color: white;
-        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
-    }
-    #reset {
-        background: linear-gradient(135deg, #4caf50, #2e8b57);
-        color: white;
-        box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
-    }
 }
 
 
@@ -221,7 +230,7 @@ li{
     h1 {
         font-size: 3em;
         text-align: center;
-        margin-bottom: 20px;
+        margin: 20px 0px;
     }
 
     /* Circular Timer Container */
@@ -280,36 +289,19 @@ li{
         text-transform: uppercase;
     }
 
-    /* Button Styles */
-    #start {
-        background: linear-gradient(135deg, #7b68ee, #6a5acd);
-        color: white;
-        box-shadow: 0 3px 8px rgba(123, 104, 238, 0.5);
-    }
-
-    #pause {
-        background: linear-gradient(135deg, #ff6b6b, #e74c3c);
-        color: white;
-        box-shadow: 0 3px 8px rgba(231, 76, 60, 0.5);
-    }
-
-    #reset {
-        background: linear-gradient(135deg, #4caf50, #2e8b57);
-        color: white;
-        box-shadow: 0 3px 8px rgba(46, 139, 87, 0.5);
-    }
-
     /* Settings */
     .settings {
         display: flex;
-        justify-content: space-around;
+        /* justify-content: space-around; */
         width: 100%;
         margin-top: 15px;
+        margin-left: 100px;
     }
 
     .settings label {
         font-size: 1em;
         margin: 5px;
+        margin-left: 70px;
     }
 
     .settings input {
