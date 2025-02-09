@@ -7,9 +7,11 @@ body {
     background: radial-gradient(circle, #1e1e2e, #12121a);
     color: #fff;
 }
-h1{
+
+h1 {
     color: white;
 }
+
 .container1 {
     text-align: center;
     background: linear-gradient(135deg, #282a36, #1b1b2f);
@@ -19,13 +21,15 @@ h1{
     position: relative;
     width: 400px;
 }
-.timer-display{
+
+.timer-display {
     font-size: 4em;
     margin: 20px 0;
     color: rgb(86, 23, 128);
     font-weight: bold;
     text-shadow: 0 0 10px rgba(147, 112, 219, 0.3);
 }
+
 .progress-bar {
     width: 100%;
     height: 10px;
@@ -34,12 +38,14 @@ h1{
     overflow: hidden;
     margin-bottom: 15px;
 }
+
 .progress {
     height: 100%;
     width: 0%;
     background: linear-gradient(135deg, #7b68ee, #6a5acd);
-    transition: width 0.5s;
+    transition: width 1s linear; /* Smooth transition for the progress bar */
 }
+
 .controls button {
     margin: 10px;
     padding: 15px 30px;
@@ -51,11 +57,17 @@ h1{
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.controls button:hover {
+    transform: scale(1.05);
+}
+
 .settings label {
     display: block;
     margin: 10px 0;
     font-size: 1.1em;
 }
+
 .settings input {
     width: 60px;
     text-align: center;
@@ -67,88 +79,76 @@ h1{
     color: white;
 }
 
+/* Styling for specific buttons */
 #start {
     background: linear-gradient(135deg, #7b68ee, #6a5acd);
-    color: white;   
+    color: white;
     box-shadow: 0 4px 15px rgba(123, 104, 238, 0.5);
 }
+
 #pause {
     background: linear-gradient(135deg, #ff6b6b, #e74c3c);
     color: white;
     box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
 }
+
 #reset {
     background: linear-gradient(135deg, #4caf50, #2e8b57);
     color: white;
     box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
 }
+
 #skip-break {
     background: linear-gradient(135deg, #29c8bd, #71c5c5);
     color: white;
     box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
 }
-
-.body-chg{
-    background: radial-gradient(circle, #bbbbbd, #d0d0d4);
-    color: #212020;
-}
-.h1-chg{
-    color: white;
-    text-shadow: 0 0 10px rgba(11, 10, 14, 0.3);
-    font-family: serif;
-    font-size: 40px;
-}
-.container1-chg{
-    background: linear-gradient(135deg, #b6bad2, #a8a8b8);
-    box-shadow: 0 0 20px rgba(63, 60, 67, 0.8);
-} 
-.timer-display-chg{
-    font-size: 50px;
-     text-shadow: 0 0 10px rgba(11, 10, 14, 0.1);
-    color: rgb(64, 9, 101);
-}
-.progress-bar-chg{
-    background: #d5d3d3;
-  
+/* Animated Timer */
+.animated-timer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
 }
 
-label,p{
-    color: white;
-}
-#h1{
-    color: white;
-}
-#reset:hover, #pause:hover, #start:hover,#skip-break:hover {
-    transform: scale(1.05);
-    background: none;
-     color: black;
-     
-}
-
-#reset:hover{
-    border: 2px solid green;
-    color: green;
-}
-#skip-break:hover{
-    border: 2px solid rgb(16, 232, 217);
-    color: rgb(18, 222, 212);
+.rotating-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        #7b68ee 0%,
+        #6a5acd 100%
+    );
+    animation: pulse-timer 1s infinite ease-in-out paused;
+    transform: rotate(-90deg); 
 }
 
-#pause:hover{
-    border: 2px solid red;
-    color: red;
+.rotating-circle.active {
+    animation-play-state: running;
 }
 
-#start:hover{
-    border: 2px solid blue;
-    color: blue;
-}
-.checkbtn{
+.timer-display {
     position: absolute;
-    right: 10px;
-    top: 0px;
-    font-size: 20px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
 }
- .h1-chg{
-    color: black;
- }
+
+@keyframes pulse-timer {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(123, 104, 238, 0.8);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 50px rgba(123, 104, 238, 1);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(123, 104, 238, 0.8);
+    }
+}
