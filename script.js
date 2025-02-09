@@ -35,12 +35,14 @@ function startTimer() {
 
             if (!isBreak) {
                 sessions++;
+                alert('Break time🍵');
                 sessionCount.textContent = sessions;
                 timeLeft = (sessions % 4 === 0) ? longBreakInput.value * 60 : breakInput.value * 60;
                 isBreak = true;
             } else {
                 timeLeft = workInput.value * 60;
                 isBreak = false;
+                alert('Break time ended💻');
             }
             startTimer();
         }
