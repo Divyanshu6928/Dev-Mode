@@ -126,6 +126,36 @@ li{
     color: white;
     box-shadow: 0 3px 8px rgba(46, 139, 87, 0.5);
 }
+#skip-break {
+    background: linear-gradient(135deg, #29c8bd, #71c5c5);
+    color: white;
+    box-shadow: 0 4px 15px rgba(13, 194, 218, 0.5);
+    
+}
+#skip-break:hover{
+    background: transparent;
+    border: 1px solid #29c8bd;
+    color: #71c5c5;
+    box-shadow: 0 4px 15px rgba(13, 194, 218, 0.5);
+}
+#reset:hover {
+    background: transparent;
+    border: 1px solid #7b68ee;
+    color:  #6a5acd;
+    box-shadow: 0 3px 8px rgba(123, 104, 238, 0.5);
+}
+#pause:hover {
+    background: transparent;
+    border: 1px solid #ff6b6b;
+    color: #e74c3c;
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.5);
+}
+#start:hover {
+    background: transparent;
+    border: 1px solid  #2e8b57;
+    color:  #069a46;
+    box-shadow: 0 3px 8px rgba(46, 139, 87, 0.5);
+}
 #start:active{
 transform: scale(0.9);
 }
@@ -133,6 +163,9 @@ transform: scale(0.9);
     transform: scale(0.9);
  }
 #reset:active{
+    transform: scale(0.9);
+}
+#skip-break:active{
     transform: scale(0.9);
 }
 
@@ -155,27 +188,7 @@ transform: scale(0.9);
         position: relative;
         width: 350px;
     }
-    .timer-display {
-        font-size: 4em;
-        margin: 20px 0;
-        color: #c792ea;
-        font-weight: bold;
-        text-shadow: 0 0 10px rgba(147, 112, 219, 0.7);
-    }
-    .progress-bar {
-        width: 100%;
-        height: 10px;
-        background: #444;
-        border-radius: 12.5px;
-        overflow: hidden;
-        margin-bottom: 15px;
-    }
-    .progress {
-        height: 100%;
-        width: 0%;
-        background: linear-gradient(135deg, #7b68ee, #6a5acd);
-        transition: width 0.5s;
-    }
+
     .controls button {
         margin: 10px;
         padding: 15px 30px;
@@ -237,62 +250,6 @@ transform: scale(0.9);
         margin: 20px 0px;
     }
 
-    /* Circular Timer Container */
-    .timer-container {
-        position: relative;
-        width: 180px;
-        height: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Timer Display inside the Circular Progress */
-    .timer-display {
-        font-size: 2.5em;
-        font-weight: bold;
-        color: #c792ea;
-        text-shadow: 0 0 10px rgba(147, 112, 219, 0.7);
-        position: absolute;
-    }
-
-    /* Circular Progress Bar */
-    .progress-bar {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        background: conic-gradient(#7b68ee 0% 0%, #444 0% 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Timer and Controls Layout */
-    .timer-controls {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .controls {
-        display: flex;
-        gap: 100px;
-    }
-
-    .controls button {
-        margin-top: 10px;
-        padding: 12px 24px;
-        font-size: 1.2em;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.3s;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
     /* Settings */
     .settings {
         display: flex;
@@ -339,5 +296,55 @@ input[type="number"]:hover{
     outline: none;
     cursor: pointer;
     
+}
+
+/* Animated Timer */
+.animated-timer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.rotating-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        #7b68ee 0%,
+        #6a5acd 100%
+    );
+    animation: pulse-timer 1s infinite ease-in-out paused;
+    transform: rotate(-90deg); 
+}
+
+.rotating-circle.active {
+    animation-play-state: running;
+}
+
+.timer-display {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+@keyframes pulse-timer {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(123, 104, 238, 0.8);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 50px rgba(123, 104, 238, 1);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(123, 104, 238, 0.8);
+    }
 }
 
