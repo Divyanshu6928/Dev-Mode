@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -6,6 +7,8 @@ body {
     height: 100vh;
     background: radial-gradient(circle, #1e1e2e, #12121a);
     color: #fff;
+    padding: 0 20%;
+    
 }
 .container {
     text-align: center;
@@ -29,6 +32,7 @@ body {
     background: #444;
     border-radius: 12.5px;
     overflow: hidden;
+
     margin-bottom: 15px;
 }
 .progress {
@@ -50,68 +54,343 @@ body {
     border: none;
     border-radius: 12.5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.1s ease-in-out;
     font-weight: bold;
     text-transform: uppercase;
-}
-.settings label {
-    display: block;
-    margin: 10px 0;
-    font-size: 1.1em;
-}
-.settings input {
-    width: 60px;
-    text-align: center;
-    border-radius: 12.5px;
-    padding: 5px;
-    border: none;
-    font-size: 1.1em;
-    background: #2e2e3e;
-    color: white;
-}
 
-#start {
-    background: linear-gradient(135deg, #4caf50, #2e8b57);
+}
+.controls button:hover {
+    scale: 1.1;
 
-    color: white;   
-    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.5);
-
-    transition: all 0.2s ease-in-out 
-}
-
-#start:hover{
-    transform: scale(1.1) ;
-}
-#pause {
-    background: linear-gradient(135deg, #ff6b6b, #e74c3c);
-    color: white;
-
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
-    transition: all 0.2s ease-in-out 
-}
-#pause:hover{
-    transform: scale(1.1) ;
-}
-#reset {
-    background: linear-gradient(135deg, #7b68ee, #6a5acd);
-    color: white;
-    box-shadow: 0 4px 15px rgba(123, 104, 238, 0.5);
-    transition: all 0.2s ease-in-out 
-}
-#reset:hover{
-    transform: scale(1.1) ;
 }
 
 input[type="number"]{
-    color: white;
+    
+    padding: 0.2em;
     border-radius: 4px;
     border: 2px solid  transparent;
-    transition: border-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
 }
 input[type="number"]:hover{
-    border-color: rgb(188, 10, 188);
+    border-color: rgba(147, 112, 219, 0.8);
     outline: none;
     cursor: pointer;
     
 }
+
+
+
+.btn{
+    background-color:rgb(239, 103, 103);
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    margin-left: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 0.7em;
+    width: 3em;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    scale: 1.1;
+}
+
+p{
+    color: rgb(167, 239, 60);
+}
+
+
+
+
+ @media  (max-width:480px) {
+    body {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: radial-gradient(circle, #1e1e2e, #12121a);
+        color: #fff;
+    }
+    .container {
+        text-align: center;
+        background: linear-gradient(135deg, #282a36, #1b1b2f);
+        padding: 30px;
+        border-radius: 12.5px;
+        box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
+        position: relative;
+        width: 100vw;
+    }
+    .timer-display {
+        font-size: 4em;
+        margin: 20px 0;
+        color: #c792ea;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgba(147, 112, 219, 0.7);
+    }
+    .progress-bar {
+        width: 100%;
+        height: 2vh;
+        background: #444;
+        border-radius: 12.5px;
+        overflow: hidden;
+        margin-bottom: 4%;
+    }
+    .progress {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(135deg, #7b68ee, #6a5acd);
+        transition: width 0.5s;
+    }
+    .controls{
+        display: flex;
+        justify-content: center;
+    }
+
+    .controls button {
+        padding: 3% 7%;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 12.5px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #start {
+        
+        background: linear-gradient(135deg, #4caf50, #2e8b57);
+        color: white;
+        box-shadow: 0 3px 8px rgba(46, 139, 87, 0.5);
+    }
+
+    #pause {
+        background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+        color: white;
+        box-shadow: 0 3px 8px rgba(231, 76, 60, 0.5);
+    }
+
+    #reset {
+        background: linear-gradient(135deg, #7b68ee, #6a5acd);
+        color: white;
+        box-shadow: 0 3px 8px rgba(123, 104, 238, 0.5);
+        
+    }
+   
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .settings-box{
+        margin-top: 2em;
+        padding: 10px;
+        border: 1px solid purple;
+        box-shadow:0 0 5px rgba(151, 134, 183, 0.8);
+        background: transparent;
+        color: #f1f1fa;
+        width: 24em;
+        display: flex;
+        justify-content: center;
+    }
+   
+    .settings-box li{
+        padding: 0.4em;
+
+    }
+    li input{
+        width: 2.5em;
+        text-align: center;
+        background: #2e2e3e;
+        color: white;
+    }
+
+    
+
+    /* Sessions Completed */
+    p {
+        font-size: 1.1em;
+        margin-top: 15px;
+    }
+}
+    
+
+
+
+
+
+
+@media  (min-width:768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: radial-gradient(circle, #1e1e2e, #12121a);
+        color: #fff;
+        /* padding: 100; */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        max-width: 900px;
+        background: linear-gradient(135deg, #282a36, #1b1b2f);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
+    }
+
+    /* Title */
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Circular Timer Container */
+    .timer-container {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Timer Display inside the Circular Progress */
+    .timer-display {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #c792ea;
+        text-shadow: 0 0 10px rgba(147, 112, 219, 0.7);
+        position: absolute;
+    }
+
+    /* Circular Progress Bar */
+    .progress-bar {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: conic-gradient(#7b68ee 0% 0%, #444 0% 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Timer and Controls Layout */
+    .timer-controls {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .controls {
+        display: flex;
+        gap: 100px;
+    }
+
+    .controls button {
+        margin-top: 10px;
+        padding: 12px 24px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .controls{
+        display: flex;
+        justify-content: center;
+    }
+
+    .controls button {
+        
+        padding: 3% 7%;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 12.5px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    /* Button Styles */
+    #start {
+        
+        background: linear-gradient(135deg, #4caf50, #2e8b57);
+        color: white;
+        box-shadow: 0 3px 8px rgba(46, 139, 87, 0.5);
+    }
+
+    #pause {
+        background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+        color: white;
+        box-shadow: 0 3px 8px rgba(231, 76, 60, 0.5);
+    }
+
+    #reset {
+        background: linear-gradient(135deg, #7b68ee, #6a5acd);
+        color: white;
+        box-shadow: 0 3px 8px rgba(123, 104, 238, 0.5);
+        
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+       
+    }
+
+    /* Settings */
+    .settings-box{
+        margin-top: 10px;
+        padding: 10px;
+        box-shadow:0 0 5px rgba(151, 134, 183, 0.8);
+        background: transparent;
+        color: #f1f1fa;
+        display: flex;
+        justify-content: center;
+        gap:2px;
+        width: 80%;
+        font-size: 15px;
+    }
+    
+    
+    .settings-box ul{
+        display: flex;
+        gap: 2em;
+        padding: 1.5 em;
+    }
+    li input{
+        width: 50px;
+        text-align: center;
+        background: #2e2e3e;
+        color: white;
+    }
+
+    
+
+    /* Sessions Completed */
+    p {
+        font-size: 1.1em;
+        margin-top: 15px;
+    }
+}
+
+
+
+
+
+

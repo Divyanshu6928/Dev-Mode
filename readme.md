@@ -8,7 +8,12 @@
 - **Customizable Timer**: Adjust work session, short break, and long break durations. 🔄  
 - **Visual Timer Display**: Real-time countdown with color-coded status for work and breaks. 📊  
 - **Pause & Reset**: Pause, resume, and reset the Pomodoro cycle. ⏹️  
-- **Cross-Platform Compatibility**: Web-based and offline-friendly for all modern browsers. 🌐
+- **Cross-Platform Compatibility**: Web-based and offline-friendly for all modern browsers. 🌐  
+- **🔔 Smart Notifications**: Get alerts when it's time to work or take a break.  
+ 
+
+
+
 
 ## 🚀 Future Improvements
 
@@ -20,8 +25,6 @@ We aim to enhance the **Pomodoro Timer** with the following features:
 - **Animated Timer** ⏳ - Smooth animations for a better user experience.
 
 ### ⏰ Advanced Timer Features
-- **Custom Time Durations** 🔄 - Users can set their own Pomodoro and break durations.
-
 - **Skip Breaks** 🚀 - Option to skip breaks when users feel productive.
 
 ### 📊 Productivity Tracking
@@ -66,7 +69,7 @@ We love contributions! 💡
 - Push your branch to your fork.
 - Open a Pull Request!
 
-⚠️Note: Whenever I deploy new project on internet I Will paste link in repo description. Defenately try to check out it and give feedback on it.
+⚠️Note: Whenever I deploy new project on internet I Will paste link in repo description. Definitely try to check out it and give feedback on it.
 
 ## 💛 Support & Contact
 Got any questions or feedback? Let’s talk! 🤖
