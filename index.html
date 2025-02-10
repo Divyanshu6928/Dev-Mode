@@ -10,34 +10,31 @@
     <div class="container">
         <h1>Pomodoro Timer</h1>
         
-        <div class="timer-container">
-            <div class="progress-bar">
-                <div class="progress"></div>
+        <!-- Animated Timer -->
+        <div class="animated-timer">
+            <div class="rotating-circle">
+                <div class="timer-display">25:00</div>
             </div>
-            <div class="timer-display">25:00</div>
         </div>
 
         <div class="controls">
             <button id="start">Start</button>
             <button id="pause">Pause</button>
             <button id="reset">Reset</button>
+            <button id="skip-break">Skip Break</button>
         </div>
 
-
-       
+        <!-- Settings Box -->
         <div class="settings-box">
             <ul>
-           
-                <li> <label class="work1">Work (min): <input type="number" id="work-time" value="25" min="1">  </label> </li>
+                <li><label class="work1">Work (min): <input type="number" id="work-time" value="25" min="1"></label></li>
                 <li><label class="work2">Break (min): <input type="number" id="break-time" value="5" min="0"></label></li>
                 <li><label class="work3">Long Break (min): <input type="number" id="long-break-time" value="15" min="0" class="longbreak"></label></li>
                 <li><button class="btn">SET</button></li>
             </ul>
-            
-            
         </div>
 
-        <p>Sessions Completed: <span id="session-count">0</span>🔥</p>
+        <p class="session-paragraph">Sessions Completed: <span id="session-count">0</span>🔥</p>
     </div>
     
     <script src="script.js"></script>
